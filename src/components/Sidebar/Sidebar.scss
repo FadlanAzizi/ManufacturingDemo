@@ -1,0 +1,43 @@
+#sidebar-menu-header {
+  font-size: 11px;
+  text-align: left;
+  margin: 0px;
+}
+
+#sidebar-menu-href {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+a {
+  color: #1f272ecc;
+  font-weight: 300;
+  text-decoration: none;
+  background-color: transparent;
+  text-align: left;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+.badge,
+a {
+  transition: 0.2s;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.open > .dropdown-toggle.btn {
+  background-color: #ebeef0;
+  border-radius: 8px;
+}

@@ -1,0 +1,79 @@
+<div id="container-box">
+  <menu-header/>
+  <b-container>
+    <b-row style="margin-top: 25px;">
+      <b-col class="col-lg-2">
+        <p>
+          <strong>
+            Sort :
+          </strong>
+        </p>
+        <b-input-group size="sm" style="margin-bottom: 2rem;">
+          <b-form-select
+            id="sort-by-select"
+            v-model="sortBy"
+            :options="sortOptions"
+            style="width: 6rem;"
+          >
+            <template #first>
+              <option value="">-- none --</option>
+            </template>
+          </b-form-select>
+          <b-form-select
+            v-model="sortDesc"
+            :disabled="!sortBy"
+            size="sm"
+            class="w-25"
+          >
+            <option :value="false">Asc</option>
+            <option :value="true">Desc</option>
+          </b-form-select>
+        </b-input-group>
+        <p>
+          <strong>
+            Filter :
+          </strong>
+        </p>
+        <b-input-group size="sm" style="margin-bottom: 2rem;">
+          <b-form-input
+            id="filter-input"
+            v-model="filter"
+            type="search"
+            placeholder="Type to Search"
+          ></b-form-input>
+
+          <b-input-group-append>
+            <b-button :disabled="!filter" @click="filter = ''">Clear</b-button>
+          </b-input-group-append>
+        </b-input-group>
+        <p>
+          <strong>
+            Per page :
+          </strong>
+        </p>
+        <b-form-select
+          id="per-page-select"
+          v-model="perPage"
+          :options="pageOptions"
+          size="sm"
+        ></b-form-select>
+      </b-col>
+      <b-col>
+        <b-table
+          :items="items"
+          :current-page="currentPage"
+          :per-page="perPage"
+        ></b-table>
+        <b-pagination
+          style="float: right;"
+          v-model="currentPage"
+          :total-rows="totalRows"
+          :per-page="perPage"
+          size="sm"
+          class="my-0"
+        ></b-pagination>
+      </b-col>
+    </b-row>
+  </b-container>
+  <menu-footer />
+</div>

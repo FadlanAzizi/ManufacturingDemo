@@ -1,0 +1,25 @@
+#header-container-head {
+  box-shadow:  0px 1px 2px rgba(25,39,52,0.05),0px 0px 4px rgba(25,39,52,0.1);
+}
+
+#header-container-box {
+  padding: 10px;
+  height: 100% !important;
+}
+
+#header-left-item {
+  float: left;
+  align-self: center;
+}
+
+#header-right-item {
+  float: right;
+  margin: 5px;
+  align-self: center;
+}
+
+#header-dropdown {
+  color: green;
+  background-color: white;
+  border-color: #6c757d;
+}

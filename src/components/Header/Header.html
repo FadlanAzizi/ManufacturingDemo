@@ -1,0 +1,68 @@
+<div>
+  <b-container fluid id="header-container-head">
+    <b-container>
+      <div id="header-container-box">
+        <b-row>
+          <b-col>
+            <div class="d-flex flex-row">
+              <router-link to="/Dashboard">
+                <h3>
+                  <b-badge id="header-left-item" variant="primary">E</b-badge>
+                </h3>
+              </router-link>
+            </div>
+          </b-col>
+          <b-col>
+            <div class="d-flex flex-row-reverse">
+              <b-dropdown
+                id="header-dropdown"
+                text="User"
+                class="m-md-2"
+                size="sm"
+                variant="light"
+                right
+              >
+                <b-dropdown-item>My Profile</b-dropdown-item>
+                <b-dropdown-item>About</b-dropdown-item>
+                <b-dropdown-divider></b-dropdown-divider>
+                <b-dropdown-item href="/">Logout</b-dropdown-item>
+              </b-dropdown>
+              <b-avatar
+                variant="success"
+                text="DU"
+                id="header-right-item"
+              ></b-avatar>
+              <p id="header-right-item">|</p>
+              <b-button
+                pill
+                variant="outline-secondary"
+                style="max-width: 3rem;"
+                id="header-right-item"
+                ><i class="fas fa-bell"></i
+              ></b-button>
+              <b-input-group
+                style="max-width: 20rem;"
+                id="header-right-item"
+                size="sm"
+                ><b-form-input
+                  placeholder="Search or type a command"
+                ></b-form-input
+              ></b-input-group>
+            </div>
+          </b-col>
+        </b-row>
+      </div>
+    </b-container>
+  </b-container>
+  <b-container>
+    <b-row>
+      <b-col style="margin-top: 25px;">
+        <div class="d-flex flex-row">
+          <h5>
+            <strong>Dashboard</strong>
+          </h5>
+        </div>
+      </b-col>
+    </b-row>
+  </b-container>
+</div>
